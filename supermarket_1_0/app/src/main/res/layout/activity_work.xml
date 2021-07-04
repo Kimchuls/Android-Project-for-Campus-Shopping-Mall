@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/xui_config_color_white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:orientation="horizontal" >
+
+        <com.xuexiang.xui.widget.button.roundbutton.RoundButton
+            android:id="@+id/punch_in_button"
+            style="@style/RoundButton.Auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="showPayKeyBoard"
+            android:text="上班打卡"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/punch_in_textView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:text="你上次打卡时间为XX日XX时XX分XX秒\n请勿重复打卡"
+            android:textSize="20dp"
+            android:maxLines="2"/>
+
+        <com.xuexiang.xui.widget.button.roundbutton.RoundButton
+            android:id="@+id/punch_out_button"
+            style="@style/RoundButton.Auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="showPayKeyBoard"
+            android:text="下班打卡"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/punch_out_textView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="180dp"
+            android:gravity="center_horizontal"
+            android:text="你上次打卡时间为XX日XX时XX分XX秒\n请勿重复打卡"
+            android:textSize="20dp"
+            android:maxLines="2"/>
+
+        <com.xuexiang.xui.widget.button.roundbutton.RoundButton
+            android:id="@+id/beg_off_button"
+            style="@style/RoundButton.Auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="260dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="showPayKeyBoard"
+            android:text="今日请假"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/beg_off_textView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="300dp"
+            android:gravity="center_horizontal"
+            android:text="@string/begged_off_text"
+            android:textSize="20dp"
+            android:maxLines="2"/>
+
+        <com.xuexiang.xui.widget.button.roundbutton.RoundButton
+            android:id="@+id/work_button"
+            style="@style/RoundButton.Auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="420dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="showPayKeyBoard"
+            android:text="待做工作"
+            android:textSize="20dp" />
+
+
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

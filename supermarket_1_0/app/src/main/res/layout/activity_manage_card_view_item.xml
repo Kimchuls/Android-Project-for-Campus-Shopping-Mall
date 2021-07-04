@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="6dp"
+    app:cardBackgroundColor="@color/xui_config_color_white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="true"
+    app:contentPaddingBottom="10dp"
+    app:contentPaddingLeft="16dp"
+    app:contentPaddingRight="16dp"
+    app:contentPaddingTop="5dp">
+
+    <LinearLayout
+        android:id="@+id/rl_shopping_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.xuexiang.xui.widget.imageview.RadiusImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_is_circle="true" />
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    style="@style/TextStyle.Explain"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/xui_config_color_pure_black"
+                    tools:text="类别" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/vt_deleteItem"
+                    style="@style/Button.Radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="3dp"
+                    android:text="删除"
+                    android:textColor="@color/blue_start"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.xuexiang.xui.widget.imageview.RadiusImageView
+                android:id="@+id/iv_imageItem"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/xui_ic_default_img"
+                app:riv_border_width="0dp"
+                app:riv_corner_radius="5dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="NestedWeights">
+
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_id"
+                        style="@style/TextStyle.Content"
+                        android:ellipsize="end"
+                        android:gravity="start|center_vertical"
+                        android:singleLine="false"
+                        android:textColor="@color/xui_config_color_content_text"
+                        tools:text="id：0000000" />
+                    <Space
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="NestedWeights">
+
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        style="@style/TextStyle.Content"
+                        android:ellipsize="end"
+                        android:gravity="start|center_vertical"
+                        android:singleLine="false"
+                        android:textColor="?attr/xui_config_color_content_text"
+                        tools:text="名称：0000000" />
+
+                    <Space
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_other_info"
+                    style="@style/TextStyle.Explain"
+                    android:layout_marginTop="3dp"
+                    android:ellipsize="end"
+                    android:gravity="start|center_vertical"
+                    android:singleLine="false"
+                    android:textSize="14dp"
+                    android:textColor="?attr/xui_config_color_content_text"
+                    tools:text="简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_stat"
+                    style="@style/TextStyle.Explain"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    tools:text="数量/考勤状态"
+                    android:textSize="15dp"/>
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

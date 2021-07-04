@@ -1,0 +1,110 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.supermarket_1_0"
+        minSdkVersion 30
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+apply plugin: 'com.xuexiang.xrouter' //引用xrouter-plugin插件实现自动注册
+apply plugin: 'com.xuexiang.xaop' //引用xaop插件
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // XPage
+    implementation 'com.github.xuexiangjys.XPage:xpage-lib:3.0.3'
+    annotationProcessor 'com.github.xuexiangjys.XPage:xpage-compiler:3.0.3'
+    // ButterKnife的sdk
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    //leak
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    //xui
+    implementation 'com.github.xuexiangjys:XUI:1.1.5'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    compile 'com.squareup.okhttp3:okhttp:3.10.0'
+    //json数据解析的工具
+    compile 'com.google.code.gson:gson:2.8.2'
+    //implementation files('libs/activation.jar')
+    //implementation files('libs/additionnal.jar')
+    //entation files('libs/mail.jar')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // 友盟基础组件
+    implementation'com.umeng.umsdk:common:2.1.0'
+    implementation 'com.umeng.umsdk:push:6.2.0'
+    //XRoute
+    implementation 'com.github.xuexiangjys.XRouter:xrouter-runtime:1.0.1'
+    annotationProcessor 'com.github.xuexiangjys.XRouter:xrouter-compiler:1.0.1'
+
+    //SmartRefreshLayout
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    // 注意：分包之后不会有默认的Header和Footer需要手动添加！还是原来的三种方法！
+    /*implementation  'com.scwang.smart:refresh-layout-kernel:2.0.2'      //核心必须依赖
+    implementation  'com.scwang.smart:refresh-header-radar:2.0.2'       //雷达刷新头
+    implementation  'com.scwang.smart:refresh-header-falsify:2.0.2'     //虚拟刷新头
+    implementation  'com.scwang.smart:refresh-header-material:2.0.2'    //谷歌刷新头
+    implementation  'com.scwang.smart:refresh-footer-ball:2.0.2'        //球脉冲加载*/
+    //下拉刷新
+    implementation 'com.github.xuexiangjys.SmartRefreshLayout:refresh-header:1.1.5'
+    implementation 'com.github.xuexiangjys.SmartRefreshLayout:refresh-layout:1.1.5'
+
+
+    //XHTTP2
+    implementation 'com.github.xuexiangjys:XHttp2:1.0.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.12'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    //基础功能的工具类
+    implementation 'com.github.xuexiangjys.XUtil:xutil-core:2.0.0'
+    //附加功能的工具类
+    implementation 'com.github.xuexiangjys.XUtil:xutil-sub:2.0.0'
+    //Ali layout
+    implementation 'com.alibaba.android:vlayout:1.2.36'
+    //WebView
+    implementation 'com.github.xuexiangjys.AgentWeb:agentweb-core:1.0.0'
+    //腾讯的键值对存储mmkv
+    implementation 'com.tencent:mmkv:1.0.22'
+    //屏幕适配AutoSize
+    implementation 'me.jessyan:autosize:1.1.2'
+    //xaop
+    implementation 'com.github.xuexiangjys.XAOP:xaop-runtime:1.0.1'
+    //litepal
+    implementation 'org.litepal.android:core:1.6.1'
+}

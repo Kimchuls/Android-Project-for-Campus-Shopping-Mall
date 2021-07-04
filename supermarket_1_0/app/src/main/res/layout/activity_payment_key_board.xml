@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="159dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextStyle.Explain"
+            android:layout_marginStart="80dp"
+            android:text="请选择门店："
+            android:textColor="@color/blue_start"
+            android:textSize="30dp" />
+
+        <Spinner
+            android:id="@+id/shop_spinner"
+            style="@style/SpinnerStyle"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="?attr/xui_config_content_spacing_vertical"
+            android:entries="@array/sort_shop_list" />
+
+    </LinearLayout>
+
+    <com.xuexiang.xui.widget.button.roundbutton.RoundButton
+        android:id="@+id/pay_button"
+        style="@style/RoundButton.Auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="showPayKeyBoard"
+        android:text="支付"
+        android:textSize="40dp" />
+
+    <com.xuexiang.xui.widget.button.roundbutton.RoundButton
+        android:id="@+id/submit_button"
+        style="@style/RoundButton.Auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pay_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="40dp"
+        android:onClick="clickedSubmit"
+        android:text="提交"
+        android:textSize="40dp" />
+</RelativeLayout>
